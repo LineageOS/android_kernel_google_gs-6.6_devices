@@ -9,6 +9,10 @@
 #include <dt-bindings/gpio/gpio.h>
 #include "google-base/platform/lga-synaptics-touch.dtsi"
 
+&lsion_cli20_int3_spi {
+	google,cs-clock-delay-us = <10>;
+};
+
 &spitouch {
 	goog,touch_offload_id = /bits/ 8 <'m' 't' '5' '0'>;
 	goog,display-resolution = /bits/ 16 <1344 2992>;
