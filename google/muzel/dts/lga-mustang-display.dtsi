@@ -27,6 +27,7 @@
 		/* reset, power */
 		reset-gpios = <PMICS2DISP0_RESET_L(GPIO_ACTIVE_HIGH)>;
 		tout-gpios = <DISP0_2_AP_PROX0_TOUT(GPIO_ACTIVE_HIGH)>;
+		err_fg-gpios = <DISP0_2_AP_ERR_FG(GPIO_ACTIVE_HIGH)>;
 		vci-supply = <&ldo_18s_reg>;
 		vddi-supply = <&buck_12s_reg>;
 		vddd-supply = <&s2dos07x02>;

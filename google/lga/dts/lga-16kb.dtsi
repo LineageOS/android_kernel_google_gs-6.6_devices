@@ -14,6 +14,10 @@
 	reg = <0x00000000 0xf6200000 0x00000000 0x00004000>;
 };
 
+&cpu_stats_carveout {
+	reg = <0x00000000 0x8b20c000 0x00000000 0x00004000>; /* 16KB */
+};
+
 / {
 	fragment@modemif {
 		__overlay__ {

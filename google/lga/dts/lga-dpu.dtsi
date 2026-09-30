@@ -18,7 +18,8 @@
 
 		dpu: dc9x00@200000 {
 			compatible = "verisilicon,dc9x00";
-			reg = <0x200000 0x120000>;
+			reg = <0x200000 0x120000>, <0x390000 0x10000>;
+			reg-names = "dpu-fe-be", "dpu-gpcsr";
 			interrupt-parent = <&dpu_level_aggr_20_intr>;
 			interrupts = <DPU_GIA_LEVEL_20_AGGR_FE_0_NS_GIA_INPUT_IRQ_DPU_FE_LAYER_FRM_DONE_0>, /* FE0 layer done */
 				     <DPU_GIA_LEVEL_20_AGGR_FE_0_NS_GIA_INPUT_IRQ_DPU_FE_LAYER_FRM_DONE_1>,

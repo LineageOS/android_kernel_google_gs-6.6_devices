@@ -72,7 +72,7 @@
 
 &max77779_chg {
 	status = "okay";
-	max77779,wlc-en = <&google_wlc_gpio 1 GPIO_ACTIVE_HIGH>;
+	max77779,wlc-en-gpio = <&google_wlc_gpio 1 GPIO_ACTIVE_HIGH>;
 };
 
 &max77779_sp {

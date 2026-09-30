@@ -7,6 +7,7 @@
  */
 
 #include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/interrupt-controller/irq.h>
 #include <dt-bindings/lwis/platform/laguna/tof.h>
 
 &slg51002_ldo1 {
@@ -133,8 +134,7 @@
 		irq-gpios = <LDAF2AOC_IRQ_OD_L_1V2(GPIO_ACTIVE_LOW)>;
 		irq-gpios-names = "tof-irq";
 		irq-gpios-events = <LWIS_PLATFORM_EVENT_ID_TOF_DATA_POLLING>;
-		/* IRQF_ONESHOT | IRQF_TRIGGER_FALLING */
-		irq-gpios-types = <0x2002>;
+		irq-gpios-types = <IRQ_TYPE_EDGE_FALLING>;
 
 		/* Power supplies */
 		/* VADD 3.3V */

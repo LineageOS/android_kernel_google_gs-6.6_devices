@@ -130,12 +130,28 @@
 		0x3A 0xA95A	/* VEmpty */
 	>;
 
-	maxim,fg-aafv = /bits/ 32 <
-		  0   95  0xf  0x02d4
-		 20   90  0xf  0x016a
-		 40   85  0xf  0x016a
-		 60   80  0xf  0x016a
-		 80   75  0xf  0x016a
-		100   70  0xf  0x016a
-	>;
+	maxim,config {
+		maxim,atl-1k {
+			maxim,batt-id-kohm = <1>;
+			maxim,fg-aafv = /bits/ 32 <
+				0    95  0xf  0x02d4
+				20   90  0xf  0x016a
+				40   85  0xf  0x016a
+				60   80  0xf  0x016a
+				80   75  0xf  0x016a
+				100  70  0xf  0x016a
+			>;
+		};
+		maxim,lwn-4k {
+			maxim,batt-id-kohm = <4>;
+			maxim,fg-aafv = /bits/ 32 <
+				0    95  0xf  0x031a
+				20   90  0xf  0x018d
+				40   85  0xf  0x018d
+				60   80  0xf  0x018d
+				80   75  0xf  0x018d
+				100  70  0xf  0x018d
+			>;
+		};
+	};
 };

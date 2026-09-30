@@ -11,6 +11,14 @@
 		dma-heap,name = "system";
 	};
 
+	camera_gcma_internal_heap: camera_gcma_internal_heap {
+		compatible = "google,dma-heap-gcma";
+		memory-region = <&farawimg>, <&famodel>, <&faceauth_tpu>;
+		dma-heap,name = "gcma_camera_internal";
+		dma-heap-gcam,fleixble-alloc;
+		status = "okay";
+	};
+
 	faceauth_model_heap: faceauth_model_heap {
 		compatible = "google,dma-heap-gcma";
 		memory-region = <&famodel>;

@@ -655,6 +655,7 @@
 		google,phy-patching-mode = <2>;
 		google,enable-local-rpm;
 		google,enable-local-swh8;
+		google,toggle-resetb-on-reset;
 	};
 
 	gcdd: gcdd {
@@ -1146,11 +1147,11 @@
 		reg = <0 0x0c600000 0 0x20000>;
 		reg-names = "dptx_regs";
 
-		clocks = <&gpcm_hsion_pll_dp_clk>, <&hsion_dp0_clk>, <&hsion_dp1_clk>,
-			 <&gpcm_dpu_pll_dp_clk>, <&dpu_dp0_pix_clk>, <&dpu_dp1_pix_clk>;
+		clocks = <&gpcm_hsion_pll_dp_clk>, <&hsion_dp0_clk>, <&dpu_dp0_pix_clk>,
+			 <&hsion_dp1_clk>, <&dpu_dp1_pix_clk>;
 
-		clock-names = "hsion_pll_dp_clk", "hsion_pix_clk0", "hsion_pix_clk1",
-			      "dpu_pll_dp_clk", "dpu_pix_clk0", "dpu_pix_clk1";
+		clock-names = "gpcm_pll_dp_clk", "hsion_pix_clk0", "dpu_pix_clk0",
+			      "hsion_pix_clk1", "dpu_pix_clk1";
 
 		phys = <&usb_phy 2>;
 		phy-names = "dp-phy";

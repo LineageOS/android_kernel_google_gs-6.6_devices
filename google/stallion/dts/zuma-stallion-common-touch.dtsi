@@ -99,11 +99,19 @@
 		goog,firmware_names = "focaltech_ts_fw.bin", "focaltech_ts_fw_b.bin";
 		goog,test_limits_names = "focaltech_testconf.ini", "focaltech_testconf_b.ini";
 
+		goog,touch_offload_id = /bits/ 8 <'s' 't' 'a' '5'>;
 		goog,display-resolution = /bits/ 16 <1080 2424>;
-		goog,channel-num = /bits/ 16 <16 34>;
+		goog,channel-num = /bits/ 16 <16 36>;
+		goog,offload-enabled;
+		goog,v4l2-enabled;
 		goog,offload-caps-data-types = /bits/ 16 <0x1F>;
 		goog,offload-caps-scan-types = /bits/ 16 <0xC0>;
 		goog,offload-caps-context-channel-types = /bits/ 16 <0x0100>;
+		goog,lptw-suppress-coords-enabled;
+		goog,lptw-tracking-area = <440 640 1656 1856>;
+		goog,coord-filter-enabled;
+		goog,offload-caps-coord-filter;
+		goog,timestamp-correction-enabled;
 
 		controller-data {
 			samsung,spi-feedback-delay = <0>;

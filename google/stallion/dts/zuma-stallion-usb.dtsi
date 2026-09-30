@@ -84,8 +84,9 @@
 		compatible = "samsung,eusb-repeater";
 		reg = <0x3E>;
 		status = "okay";
-		pinctrl-names = "init_state";
+		pinctrl-names = "init_state", "recovery";
 		pinctrl-0 = <&eusb_init_state>;
+		pinctrl-1 = <>;
 		repeater_tune_param = <&eusb_repeater_tune>;
 		vdd33-supply = <&m_ldo19_reg>;
 		extcon = <&goog_usb_role_sw>;

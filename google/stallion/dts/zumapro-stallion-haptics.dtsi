@@ -79,8 +79,9 @@
 		reg = <0x43>;
 		input-device-name = "cs40l26_input";    /* input device name */
 
-		pinctrl-names = "default";
+		pinctrl-names = "default", "recovery";
 		pinctrl-0 = <&hapt_amp1_irq &hapt_amp1_rst &hapt_amp_trig>;
+		pinctrl-1 = <>;
 
 		interrupt-parent = <&gpa6>;
 		interrupts = <3 0 0>;
